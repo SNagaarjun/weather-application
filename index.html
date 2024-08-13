@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App / Abhishek</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/fevicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="getcity()">
+
+    <div class="container" id="cont">
+        <div class="input-group md-form form-sm form-2 pl-0">
+            <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search City" aria-label="Search"
+                id="inputcity">
+            <div class="input-group-append">
+                <span class="input-group-text red lighten-3" id="basic-text1" onclick="getweather()"><i
+                        class="fas fa-search text-grey" aria-hidden="true"></i></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-sm-6 col-12">
+                <div id="loader" class="loading">
+                    <img src="/Weather-Application-main/Images/loading.png" width="80" alt="" class="loader">
+                    <h5 style="margin-top:70px;  margin-left:200%;">Loading....</h5>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-sm-6 col-12">
+                <div class="teminfo">
+                    <div class="city">
+                        <h1 id="tempcity"></h1>
+                        <h1 id="temperature" style="font-size: 55px;"></h1>
+                        <h3 id="lastupdatedate"></h3>
+                        <img src="/Weather-Application-main/Images/fevicon.png" id="weather-icon" alt="icon" width="100px" height="100px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-sm-6 col-12">
+                <div class="air" style="margin-top: 70px;">
+                    <h3 id="air_quality"></h3>
+                    <h4><span id="co"></span> </h4>
+                    <h4><span id="so2"></span></h4>
+                    <h4><span id="no2"></span></h4>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-sm-6 col-12">
+                <img src="/Weather-Application-main/Images/umbrella.png" alt="" width="130px" style="align-items: end;" class="umbrella">
+                <div class="wind" style="margin-top: 70px;">
+                    <h3 id="Wind"></h3>
+                    <h4><span id="wind_direction"></span></h4>
+                    <h4><span id="wind_speed"></span></h4><br><br><br>
+                    <img src="/Weather-Application-main/Images/dev.png" width="50px" height="50px" alt="">
+                    <p style="color: rgb(87, 86, 86);">Abhi</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

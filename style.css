@@ -1,0 +1,169 @@
+* {
+    font-family: 'Playfair Display', serif;
+    color: rgb(17, 16, 16);
+}
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #EDEADE !important;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+.row {
+    width: 100%;
+    align-items: center;
+    height: 500px;
+    margin: 10% 0% 10% 0%;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-image: url(/Weather-Application-main/Images/thanjai\ periya\ kovil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.fa-magnifying-glass {
+    margin-top: 5px;
+    margin-left: -150px;
+    color: blue;
+}
+
+::placeholder {
+    color: rgb(0, 164, 229);
+}
+
+.city {
+    padding-left: 40px;
+    font-family: 'Playfair Display', serif;
+}
+
+.teminfo {
+    display: flex;
+    gap: 0px;
+}
+
+button {
+    border: none;
+    background: transparent;
+    width: 50px;
+    margin-right: 50px;
+}
+
+
+.fa-search {
+    color: rgb(0, 164, 229);
+}
+
+/* **************** media query for tabs ********************************** */
+@media only screen and (min-width:580px) and (max-width:770px) {
+    .row {
+        height: 527px;
+    }
+
+    .umbrella {
+        display: none;
+    }
+
+}
+
+/* ********************* media query for small screen ************** */
+@media only screen and (max-width:580px) {
+    .loader {
+        margin-left: 40% !important;
+        margin-top: 50%;
+    }
+
+    .loading img {
+        left: -5% !important;
+    }
+
+    h5 {
+        display: none;
+    }
+
+    body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .umbrella {
+        display: none;
+    }
+
+    .row {
+        height: 100%;
+        padding: 20px;
+        margin-left: -1px !important;
+        background-image: url(/Weather-Application-main/Images/responsivebg.jpg);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    .container {
+        margin-right: -17px;
+        width: 93%;
+    }
+
+    .showimg {
+        display: none;
+    }
+
+}
+
+/* ****************** search bar css *************************** */
+* {
+    box-sizing: border-box;
+}
+.input-group{
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+
+/* ******************** css loader *********************  */
+.loading img {
+    left: 180%;
+    top: -10%;
+}
+.loader {
+    top: 50px; 
+    position : absolute;
+    align-items: center;
+    top: 15%;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+
+    }
+
+    to {
+        transform: rotate(359deg);
+
+    }
+}
+
+@media only screen and (min-width: 570px) and (max-width: 770px) {
+    .loader {
+        margin-left: 88%;
+        top: 180px;
+    }
+
+    .loading img {
+        left: 3%;
+        margin-top: 55%;
+    }
+
+    h5 {
+        display: none;
+    }
+}
